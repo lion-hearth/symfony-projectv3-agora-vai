@@ -1,0 +1,17 @@
+<h1>Mamiferos</h1>
+esta é a página de detalhe do mámifero {{ animal }}.
+{# ignore esta linha #}
+{% if animal == "Gato"  %}
+     <br>
+    Nossa, um <strong>Gato</strong>
+{% endif %}
+
+<ul>
+{% for resposta in respostas %}
+    <li>
+   {{ resposta }}
+    </li>
+{% endfor %}
+</ul>
+
+<h2>{{ respostas |last  }}</h2>
