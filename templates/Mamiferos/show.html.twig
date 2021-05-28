@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block body  %}
 <h1>Mamiferos</h1>
 esta é a página de detalhe do mámifero {{ animal }}.
 {# ignore esta linha #}
@@ -15,3 +17,4 @@ esta é a página de detalhe do mámifero {{ animal }}.
 </ul>
 
 <h2>{{ respostas |last  }}</h2>
+{% endblock  %}
