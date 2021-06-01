@@ -3,30 +3,21 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <h1 class="display-3">Mamiferos</h1>
+            <p>Esta é a pagina de detalhe do mamífero Gato.</p>
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                    Está lista contém {{ respostas |length  }} itens
+                </button>
+                {% for resposta in respostas %}
+                <button type="button" class="list-group-item list-group-item-action">{{ resposta }}</button>
+                {% endfor %}
+            </div>
+
         </div>
     </div>
 
-<h1>Mamiferos</h1>
-esta é a página de detalhe do mámifero {{ animal }}.
 
-{# ignore esta linha #}
-
-{% if animal == "Gato"  %}
-     <br>
-    Nossa, um <strong>Gato</strong>
-
-{% endif %}
-
-<ul>
-{% for resposta in respostas %}
-    <li>
-   {{ resposta }}
-    </li>
-{% endfor %}
-</ul>
-
-<h2>{{ respostas |last  }}</h2>
 {% endblock  %}
